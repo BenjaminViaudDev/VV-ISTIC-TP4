@@ -47,3 +47,9 @@ Use [jqwik](https://jqwik.net/) to create property based tests verifying these t
 - Do not use any existing implementation, write your own code. 
 - Use the provided project template as a starting point.
 - In the project you can launch the tests with `mvn test`.
+
+Answer :
+
+Bug trouvé :
+Problème lors de la création des tests de conversion de lettre vers chiffre quand argot0: "�"
+Problème lors de la vérification des tests des doublons par exemple DD est impossible mais passait.
