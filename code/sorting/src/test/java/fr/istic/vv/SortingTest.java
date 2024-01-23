@@ -59,4 +59,33 @@ public class SortingTest {
         }
         return true;
     }
+
+    @Property
+    boolean testBubbleSortWithRepeatedElements(@ForAll("getRandomListWithRepeats") List<Integer> list) {
+        Object[] array = list.toArray();
+        Sorting.bubblesort(array, comparator);
+        list.sort(comparator);
+        return compareArrays(array, list.toArray());
+    }
+
+    @Property
+    boolean testQuickSortWithRepeatedElements(@ForAll("getRandomListWithRepeats") List<Integer> list) {
+        Object[] array = list.toArray();
+        Sorting.quicksort(array, comparator);
+        list.sort(comparator);
+        return compareArrays(array, list.toArray());
+    }
+
+    @Property
+    boolean testMergeSortWithRepeatedElements(@ForAll("getRandomListWithRepeats") List<Integer> list) {
+        Object[] array = list.toArray();
+        Object[] target = Arrays.stream(list.toArray()).sorted(comparator).toArray();
+        Sorting.mergesort(array, comparator);
+        return compareArrays(array, target);
+    }
+
+    @Provide
+    Arbitrary<List<Integer>> getRandomListWithRepeats() {
+        return Arbitraries.integers().list().ofMinSize(1).ofMaxSize(1000);
+    }
 }
