@@ -53,3 +53,5 @@ Answer :
 Bug trouvé :
 Problème lors de la création des tests de conversion de lettre vers chiffre quand argot0: "�"
 Problème lors de la vérification des tests des doublons par exemple DD est impossible mais passait.
+
+Lien vers l'implémentation : [RomanNumeralUtils](../code/roman-numerals/src/main/java/fr/istic/vv/RomanNumeralUtils.java) / [RomanNumeralTest](../code/roman-numerals/src/test/java/fr/istic/vv/RomanNumeralTest.java)

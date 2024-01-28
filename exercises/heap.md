@@ -35,3 +35,6 @@ With the help of [jqwik](https://jqwik.net/) create a test that generates random
 - Use the provided project template as a starting point. 
 - In the project you can launch the tests with `mvn test`.
 - You may reuse your binary heap code from the previous practical assignment.
+
+# answer 
+Lien vers l'implémentation : [BinaryHeap](../code/heap/src/main/java/fr/istic/vv/BinaryHeap.java) / [BinaryHeapTest](../code/heap/src/test/java/fr/istic/vv/BinaryHeapTest.java)
